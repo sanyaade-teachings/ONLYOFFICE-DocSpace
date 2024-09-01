@@ -74,10 +74,10 @@ jobs:
           sudo dpkg -i packages-microsoft-prod.deb
           curl -fsSL https://deb.nodesource.com/setup_20.x | sudo bash -
           sudo apt install -y dotnet-sdk-8.0 yarn nodejs rename
-          sudo npm install -g json
+          sudo npm install -g json maven
           if [[ "${{ matrix.packageType }}" == "rpm" ]]; then
             sudo apt install -y python3-rpm python3-pip
-            sudo pip install rpmlint
+            sudo pip install rpmlint 
           else
             sudo apt install -y dpkg-sig lintian dh-make
           fi
